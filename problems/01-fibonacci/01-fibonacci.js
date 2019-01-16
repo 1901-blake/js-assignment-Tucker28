@@ -4,7 +4,7 @@ Return the nth number in the fibonacci sequence. */
 function fib(n) {
 
     let arr = [0,1]; //Start Fibonacci array with the first two numbers
-    let x = 0        //set x to the first number of the sequence
+    let x = 0;        //set x to the first number of the sequence
     let y = 1;       //set y to the second number of the sequence
 
     for (let i = 0; i < (n-2); i++) {   //Use for loop to generate Fibonacci Sequence only to the number needed
