@@ -7,7 +7,6 @@ function bubbleSort(numArray) {
     while (!sorted) {
         sorted = true;
         for (let i = 0; i < numArray.length; i++) {
-        //const element = numArray[i];
             if (numArray[i] > numArray[i+1]) {
                 let temp = numArray[i];
                 numArray[i] = numArray[i+1];
