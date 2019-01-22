@@ -6,23 +6,34 @@ function fib(n) {
     let arr = [0,1]; //Start Fibonacci array with the first two numbers
 
     for (let i = 0; i < (n-2); i++) {   //Use for loop to generate Fibonacci Sequence only to the number needed
-        let z = arr[i] + arr[i + 1];    //z is the calculated next number in the Fibonacci Sequence                     
-        //arr.push(z);                    //Append the newest number onto the array
-
-        //                              Attempt to get rid of variable z
-        arr.push(arr[i] + arr[i + 1]); // => {
-        //    arr[i] + arr[i + 1];
-        //}*/
+    //    let z = arr[i] + arr[i + 1];  //z is the calculated next number in the Fibonacci Sequence. Got rid of variable later.
+        arr.push(arr[i] + arr[i + 1]);  //Append the next number onto the array
         }
-
-    /*                                  Attempted logic to insert correct suffix
-    if (condition) {
-        let suffix = 'st';
-    }*/
-
-    console.log(arr);
-    //console.log(`The ${n}${suffix} number of the Fibonacci Sequence is ` + arr[n-1]);     //goes with logic for suffix
-    console.log(`Number ${n} of the Fibonacci Sequence is ` + arr[n-1]);
+                    
+    n.toString();                       //Logic to insert correct suffix
+    let lastDigit = n % 10;
+    let last2Digits = n % 100;
+    let suffix = '';
+    //console.log(lastDigit);
+    //console.log(last2Digits);
+    if (last2Digits === 11) {
+        suffix = 'th';
+    } else if (last2Digits === 12) {
+        suffix = 'th';
+    } else if (last2Digits === 13) {
+        suffix = 'th';
+    } else if (lastDigit === 1) {
+        suffix = 'st';
+    } else if (lastDigit === 2) {
+        suffix = 'nd';
+    } else if (lastDigit === 3) {
+        suffix = 'rd';
+    } else {
+        suffix = 'th';
     }
 
-fib(16);
+    //console.log(arr);
+    console.log(`The ${n}${suffix} number of the Fibonacci Sequence is ` + arr[n-1]);
+    }
+
+fib(12);
