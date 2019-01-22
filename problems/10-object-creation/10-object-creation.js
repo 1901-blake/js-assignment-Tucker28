@@ -49,7 +49,7 @@ class NYMets {
         this.disabled = disabled;
     }
 }
-
+ 
 let myNYMet = new NYMets('David Wright', 36, 5, '3B', 'right', 0.341, 45, 0.734, 29, true);
 console.log('\n ES6 Class Constructor');
 console.log(myNYMet);
