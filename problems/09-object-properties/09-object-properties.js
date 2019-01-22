@@ -23,4 +23,5 @@ class NYMets {
 }
 
 let player = new NYMets('David Wright', 36, 5, '3B', 'right', 0.341, 45, 0.734, 29, true);
+
 objectProperties(player);
