@@ -40,15 +40,15 @@ function printShape(shape, height, character) {
       console.log('\n');
       break;
     case "Diamond":
-      let x = parseInt(height / 2);
-      let y = height % 2;
+      let x = parseInt(height / 2);                                           // divide height by 2 to get midpoint
+      let y = height % 2;                                                     // 
       let z = '';
       let arr = [];
-      if (y != 1) {
+      if (y != 1) {                                                           // logic against even numbers
         console.log('Diamonds must have a height of odd numbers.  Aborting.')
         break;
       }
-      for (let i = 0; i < height; i = i + 2) {
+      for (let i = 0; i < height; i = i + 2) {                                // build first half of the diamond
         let h = height - i;
         for (let j = 0; j < x-(i/2); j++) {
           z = z + ' ';          
@@ -63,10 +63,10 @@ function printShape(shape, height, character) {
         z = '';
       }
 
-      let revArr = arr.slice(0);
-      revArr.pop();
-      revArr.reverse();
-      let joinArr = arr.concat(revArr);
+      let revArr = arr.slice(0);        // copy diamond array
+      revArr.pop();                     // pop off the last element from the new array which will be the middle line
+      revArr.reverse();                 // reverse new array
+      let joinArr = arr.concat(revArr); // join both arrays to create complete diamond
       
       for (m in joinArr) {
         console.log(joinArr[m]);
