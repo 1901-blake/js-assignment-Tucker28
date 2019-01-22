@@ -3,6 +3,7 @@ Define function: reverseStr(someStr)
 Reverse and return the String. */
 function reverseStr(someStr) {
     let newString = '';
+
 /**
  * Split string with delimiter of an empty string to break
  * it at every character and then feed it into the new array.
